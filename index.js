@@ -16,9 +16,9 @@ app.use(cors());
 
 app.use(express.json());
 
-app.use('/register',registerrouter); 
-app.use('/admin',adminrouter); 
-app.use('/ticketbooking',Ticketbookingrouter); 
-app.use('/',auth.authenticateUser); 
+app.use('https://ticketbooking-system.herokuapp.com/register',registerrouter); 
+app.use('https://ticketbooking-system.herokuapp.com/admin',adminrouter); 
+app.use('https://ticketbooking-system.herokuapp.com/ticketbooking',Ticketbookingrouter); 
+app.use('https://ticketbooking-system.herokuapp.com/',auth.authenticateUser); 
 
 app.listen(process.env.PORT);
