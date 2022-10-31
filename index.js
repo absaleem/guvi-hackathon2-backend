@@ -7,6 +7,7 @@ const adminrouter = require("./Router/adminRouter");
 const mongo_connection = require("./connect");
 const auth = require("./modules/authModule");
 
+
 dotenv.config();
 mongo_connection.connect();
 
@@ -18,9 +19,9 @@ app.use(express.json());
 app.use('/register',registerrouter); 
 app.use('/admin',adminrouter); 
 app.use('/ticketbooking',Ticketbookingrouter); 
-app.use('/',auth.authenticateUser); 
 app.get("/", (req, res) =>
   res.send(`Server Running`)
 );
+//app.use('/auth',auth.authenticateUser); 
 //app.listen(process.env.PORT);
 app.listen(process.env.PORT, () => console.log(`Server started in the port ${process.env.PORT}`));
