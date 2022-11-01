@@ -2,8 +2,8 @@ const express = require("express");
 const cors = require("cors");
 const dotenv=require("dotenv");
 const Ticketbookingrouter = require("./router/Ticketbookingrouter");
-const registerrouter = require("./Router/registerRouter");
-const adminrouter = require("./Router/adminRouter");
+const registerrouter = require("./router/registerRouter");
+const adminrouter = require("./router/adminRouter");
 const mongo_connection = require("./connect");
 const auth = require("./modules/authModule");
 
